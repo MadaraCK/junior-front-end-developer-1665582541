@@ -1,24 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
 .App{
     background-color: #f4f5f7;
     font-family: 'Poppins', sans-serif;
     width: 100vw;
     height: 100vh;
     .container{
-        max-width: 1920px;
+        max-width: 1680px;
         margin: 0 auto;
         .logo_image{
             display: flex;
             justify-content: space-between;
             padding-top: 25px;
-            .baby_wombat{
-                background-image: url(../images//wombat-baby_Easy-Resize.com.jpg);
-                background-position: center;
-                background-size: cover;
-                border-radius: 25px;
+            .border_wombat{
                 border: 1px solid gray;
-                width: 50px;
-                height: 50px;
+                border-radius: 25px;
+                .baby_wombat{
+                    background-image: url(../images//wombat-baby_Easy-Resize.com.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 25px;
+                    width: 50px;
+                    height: 50px;
+                    margin: 1px;
+                }
             }
         }
         .two_columns{
@@ -33,9 +38,51 @@
                 box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
             }
             .left_column{
+                display: grid;
+                grid-template-rows: 10% 90%;
                 .list_tasks{
-                    font-weight: bold;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin: 23px 24px;
                 }
+                .all_tasks{
+                    border-top: 1px solid #f4f5f7;
+                    padding: 27px 0;
+                    .check_arrow{
+                        display: flex;
+                        gap: 15px;
+                      .correct_task{
+                        list-style: none;
+                      }
+                      .fa-check,
+                      .fa-arrow-right,
+                      .fa-lock{
+                        background-color: #EDF9F2;
+                        color: green;
+                        padding: 3px;
+                        margin-left: 29px;
+                      }
+                      .fa-arrow-right{
+                        background-color: #0165FF;
+                        color: #EAF2FE;
+                      }
+                      .fa-lock{
+                        background-color: #F4F5F7;
+                        color: #6B778C;
+                      }
+                      .right_arrow_task{
+                        color: #242325;
+                        font-weight: 600;
+                      }
+                      .locked_task{
+                        color: #AEB5C1;
+                      }
+                    }
+                    .check_arrow_middle,
+                    .check_arrow_fourth{
+                        margin: 15px 0;
+                    }                
+                }              
             }
             .right_column{
                 display: grid;
@@ -43,13 +90,19 @@
                 .header_business_context{
                     display: flex;
                     align-items: center;
+                    gap: 16px;
+                    .fa-compass{
+                        color: #0165ff;
+                        margin-left: 48px;
+                        font-size: 16px;
+                    }
                     .context{
                         text-transform: uppercase;
                         font-size: 16px;
                         font-weight: 600;
-                        margin-left: 80px;
+                        list-style: none;
                         color: #0165ff;
-                    }
+                    }                    
                 }
                 .both_column_right{
                     display: grid;
@@ -69,10 +122,40 @@
                             }
                             &:nth-child(3){
                                 background-color: #f4f5f7;
+                                box-shadow: none;
                             }
                             .up_text_task{
                                 display: flex;
                                 gap: 10px;
+                                color: #6B778C;
+                                .new_button{
+                                    background-color: #0165FF;
+                                    border-radius: 4px;
+                                    color: #EAF2FE;
+                                    font-size: 10px;
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    padding: 10px 9px;
+                                }
+                                .name_task,
+                                .date_send{
+                                    font-size: 14px;
+                                }
+                            }
+                            .new_text_task,
+                            .text_task_title{
+                                margin: -4px 0;
+                                font-weight: 700;
+                                font-size: 13px;     
+                                color: #242325;                         
+                            }
+                            .new_text_task{
+                                color: #0165FF;
+                            }
+                            .text_task{
+                                font-size: 12px;
+                                line-height: 14px;
+                                color: #6B778C;
                             }
                         }
                     }

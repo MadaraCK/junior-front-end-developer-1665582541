@@ -73,21 +73,45 @@ function App() {
             </svg>
           </a>
           <a href="/">
-            <div className="baby_wombat" />
+            <div className="border_wombat">
+              <div className="baby_wombat" />
+            </div>
           </a>
         </header>
         <main className="two_columns">
           <section className="left_column both_column">
             <p className="list_tasks">your tasks</p>
-            <p className="correct_task">Application Setup</p>
-            <p className="correct_task">Static Books List</p>
-            <p className="correct_task">Administration Panel</p>
-            <p className="right_arrow_task">Connect Admin with Frontend</p>
-            <p className="locked_task">Book Review Feature</p>
+            <div className="all_tasks">
+              <div className="check_arrow">
+                <i class="fa-solid fa-check"></i>
+                <li className="correct_task">Application Setup</li>
+              </div>
+              <div className="check_arrow check_arrow_middle">
+                <i class="fa-solid fa-check"></i>
+                <li className="correct_task">Static Books List </li>
+              </div>
+              <div className="check_arrow">
+                <i class="fa-solid fa-check"></i>
+                <li className="correct_task">Administration Panel </li>
+              </div>
+              <div className="check_arrow check_arrow_fourth">
+                <i class="fa-solid fa-arrow-right"></i>
+                <li className="right_arrow_task correct_task">
+                  Connect Admin with Frontend
+                </li>
+              </div>
+              <div className="locked check_arrow">
+                <i class="fa-solid fa-lock"></i>
+                <li className="locked_task correct_task">
+                  Book Review Feature
+                </li>
+              </div>
+            </div>
           </section>
           <section className="right_column both_column">
             <div className="header_business_context">
-              <p className="context">business context</p>
+              <i class="fa-regular fa-compass"></i>
+              <li className="context">business context</li>
             </div>
             <div className="both_column_right">
               <section className="small_left_column_box">
@@ -97,7 +121,7 @@ function App() {
                     <p className="name_task">Olga Nelson</p>
                     <p className="date_send">Dec 17</p>
                   </div>
-                  <p className="new_text_task">
+                  <p className="new_text_task ">
                     New sprint, tasks and intro information.
                   </p>
                   <p className="text_task">
@@ -123,7 +147,7 @@ function App() {
                     <p className="name_task">Olga Nelson</p>
                     <p className="date_send">Dec 17</p>
                   </div>
-                  <p className="text_task_title2">
+                  <p className="text_task_title">
                     New sprint, tasks and intro information.
                   </p>
                   <p className="text_task">
@@ -133,7 +157,9 @@ function App() {
                 </div>
               </section>
               <section className="small_right_column">
-                <h1 className="title_app">Application has been accepted</h1>
+                <h1 className="title_app">
+                  Application has been accepted 🎉 🙌
+                </h1>
               </section>
             </div>
           </section>
