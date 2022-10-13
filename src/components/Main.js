@@ -1,10 +1,15 @@
 import { Link, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Application from "../pages/Application";
 import Panel from "../pages/Panel";
 import StaticList from "../pages/StaticList";
 import Admin from "../pages/Admin";
 import Locked from "../pages/Locked";
 function Main() {
+  const [remove, setRemove] = useState(true);
+  const removeButton = () => {
+    setRemove((prev) => !prev);
+  };
   return (
     <main className="two_columns">
       <section className="left_column both_column">
@@ -61,7 +66,11 @@ function Main() {
           <section className="small_left_column_box">
             <div className="new_task">
               <div className="up_text_task">
-                <p className="new_button">new</p>
+                {remove && (
+                  <button className="new_button" onClick={removeButton}>
+                    new
+                  </button>
+                )}
                 <p className="name_task">Olga Nelson</p>
                 <p className="date_send">Dec 17</p>
               </div>
