@@ -219,6 +219,18 @@
                     }
                 }
             }
+          
+        }
+        .footer_nerds{
+            display: flex;
+            justify-content: space-between;
+            color: #6B778C;
+            font-size: 12px;
+            margin-top: 10px;
+           .left_column_footer,
+           .right_column_footer{
+            display: flex;
+           }
         }
     }
 }
