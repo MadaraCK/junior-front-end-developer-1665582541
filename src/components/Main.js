@@ -1,3 +1,9 @@
+import { Link, Routes, Route } from "react-router-dom";
+import Application from "../pages/Application";
+import Panel from "../pages/Panel";
+import StaticList from "../pages/StaticList";
+import Admin from "../pages/Admin";
+import Locked from "../pages/Locked";
 function Main() {
   return (
     <main className="two_columns">
@@ -6,25 +12,43 @@ function Main() {
         <div className="all_tasks">
           <div className="check_arrow">
             <i class="fa-solid fa-check"></i>
-            <li className="correct_task">Application Setup</li>
+            <li className="correct_task">
+              <Link to="/" className="link_router">
+                Application Setup
+              </Link>
+            </li>
           </div>
           <div className="check_arrow check_arrow_middle">
             <i class="fa-solid fa-check"></i>
-            <li className="correct_task">Static Books List </li>
+            <li className="correct_task">
+              <Link to="/staticList" className="link_router">
+                Static Books List
+              </Link>
+            </li>
           </div>
           <div className="check_arrow">
             <i class="fa-solid fa-check"></i>
-            <li className="correct_task">Administration Panel </li>
+            <li className="correct_task">
+              <Link to="/Panel" className="link_router">
+                Administration Panel
+              </Link>
+            </li>
           </div>
           <div className="check_arrow check_arrow_fourth">
             <i class="fa-solid fa-arrow-right"></i>
             <li className="right_arrow_task correct_task">
-              Connect Admin with Frontend
+              <Link to="/Admin" className="link_router">
+                Connect Admin with Frontend
+              </Link>
             </li>
           </div>
           <div className="locked check_arrow">
             <i class="fa-solid fa-lock"></i>
-            <li className="locked_task correct_task">Book Review Feature</li>
+            <li className="locked_task correct_task">
+              <Link to="/Locked" className="link_router">
+                Book Review Feature
+              </Link>
+            </li>
           </div>
         </div>
       </section>
@@ -76,39 +100,13 @@ function Main() {
               </p>
             </div>
           </section>
-          <section className="small_right_column">
-            <h1 className="title_app">Application has been accepted 🎉 🙌</h1>
-            <section className="img_message">
-              <div className="profil_img">
-                <div className="profil" />
-              </div>
-              <div className="message_name">
-                <div className="name_date">
-                  <p className="nick_name">Kirsten Aniston</p>
-                  <p className="date_nick">• Today, 17th December • 11:20</p>
-                </div>
-                <p className="text_kirsten kirsten_first">Hello!</p>
-                <p className="text_kirsten">
-                  My name is Kirsten, and I'm super happy to announce that your
-                  application to join Coders Family has been accepted! 🎉 🙌
-                </p>
-                <p className="text_kirsten">
-                  You really impressed us during the interview process, and we'd
-                  like to offer you a project with nerds.family. We've been
-                  working with nerds.family for quite some time, and it's
-                  important for us to keep them satisfied with our services —
-                  hence why we believe you'll be a great fit for this job.
-                </p>
-                <p className="text_kirsten">
-                  Here's the project overview: You'll be responsible for
-                  building a database and page for recording and displaying book
-                  ratings. We'd like to work in two week-long sprints, we've
-                  already given you a head start and prepared your tasks to
-                  deliver in your first sprint.
-                </p>
-              </div>
-            </section>
-          </section>
+          <Routes>
+            <Route path="/" element={<Application />} />
+            <Route path="/staticList" element={<StaticList />} />
+            <Route path="/panel" element={<Panel />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/locked" element={<Locked />} />
+          </Routes>
         </div>
       </section>
     </main>

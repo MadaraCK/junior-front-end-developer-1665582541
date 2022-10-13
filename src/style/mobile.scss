@@ -9,13 +9,18 @@
                 grid-template-rows: 50%;
                 .right_column{
                     .both_column_right{
-                        grid-template-columns: 40% 60%;
+                        grid-template-columns: 50% 50%;
                         grid-template-rows: 100vh;
                     }
                 }
             }
             .footer_nerds{
                 display: none;
+            }
+            .locked_big{
+                margin-left: 40 px;
+                color: gray;
+                font-size: 50px;
             }
         }
     }

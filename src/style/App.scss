@@ -53,6 +53,10 @@
                         gap: 15px;
                       .correct_task{
                         list-style: none;
+                        .link_router{
+                            text-decoration: none;
+                            color: black;
+                        }
                       }
                       .fa-check,
                       .fa-arrow-right,
@@ -173,6 +177,9 @@
                         margin: 18px 35px;
                         .title_app{
                             font-size: 20px;
+                            @media only screen and (max-width:720px) {
+                                font-size: 15px;
+                            }
                         }
                         .img_message{
                             max-width: 690px;
@@ -213,6 +220,14 @@
                                     font-size: 12px;
                                     line-height: 20px;
                                 }
+                                .locked_text{
+                                    text-align: center;
+                                    font-size: 33px;
+                                    color: red;
+                                    @media only screen and (max-width:720px) {
+                                        font-size: 15px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -230,5 +245,10 @@
             display: flex;
            }
         }
+    }
+    .locked_big{
+        margin-left: 170px;
+        color: gray;
+        font-size: 400px;
     }
 }
