@@ -28,7 +28,7 @@
         }
         .two_columns{
             display: grid;
-            grid-template-columns: 20% 80%;
+            grid-template-columns: 25% 75%;
             grid-template-rows: 85vh;
             gap: 20px;
             margin-top: 15px;
@@ -98,10 +98,20 @@
                     }
                     .context{
                         text-transform: uppercase;
+                        position: relative;
                         font-size: 16px;
                         font-weight: 600;
                         list-style: none;
                         color: #0165ff;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 190px;
+                            margin-top: 50px;
+                            margin-left: -30px;
+                            height: 2px;
+                            background-color: #0165FF;
+                        }
                     }                    
                 }
                 .both_column_right{
@@ -156,6 +166,54 @@
                                 font-size: 12px;
                                 line-height: 14px;
                                 color: #6B778C;
+                            }
+                        }
+                    }
+                    .small_right_column{
+                        margin: 18px 35px;
+                        .title_app{
+                            font-size: 20px;
+                        }
+                        .img_message{
+                            max-width: 690px;
+                            display: flex;
+                            justify-content: space-around;
+                            .profil_img{
+                                border: 2px solid #D4D6DA;
+                                border-radius: 25px;
+                                height: 50px;
+                                padding: 1px;
+                                .profil{
+                                    background-image: url('../images//baby-wombat_Easy-Resize.com\ \(1\).jpg');
+                                    background-position: center;
+                                    background-size: cover;
+                                    border-radius: 25px;
+                                    width: 50px;
+                                    height: 50px;                            
+                                    }
+                            }
+                            .message_name{
+                                .name_date{
+                                    display: flex;
+                                    margin-bottom: -10px;
+                                    
+                                    .nick_name{
+                                        font-size: 18px;
+                                        margin-left: 14px;
+                                        color: #242325;
+                                    }
+                                    .date_nick{
+                                        font-size: 12px;
+                                        margin: 22px 0 0px 10px;
+                                        color: #6B778C;
+                                    }
+                                }
+                                .text_kirsten{
+                                    color: #6B778C;
+                                    margin-left: 14px;
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                }
                             }
                         }
                     }
