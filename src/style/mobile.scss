@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+@media only screen and (max-width:720px) {
+    .App{
+      width: 100vw;
+        .container{
+            .two_columns{
+                grid-template-columns: 100%;
+                grid-template-rows: 50%;
+                .right_column{
+                    .both_column_right{
+                        grid-template-columns: 40% 60%;
+                        grid-template-rows: 100vh;
+                    }
+                }
+            }
+            .footer_nerds{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import "./style/App.scss";
+import "./style/mobile.scss";
 import "./style/normalize.scss";
 import Header from "./components/Header";
 import Main from "./components/Main";
